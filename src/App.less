@@ -1,0 +1,152 @@
+.threshold-event-rule-detail-panel {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+
+  .header {
+    background: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    .device-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+
+      .home-icon {
+        color: #1890ff;
+        font-size: 18px;
+        margin-right: 8px;
+      }
+
+      .device-name {
+        margin: 0;
+      }
+    }
+
+    .nav-tabs {
+      .nav-item {
+        color: #666;
+        cursor: pointer;
+        padding: 4px 0;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #1890ff;
+        }
+
+        &.active {
+          color: #1890ff;
+          font-weight: 500;
+          border-bottom: 2px solid #1890ff;
+        }
+      }
+    }
+  }
+
+  .alarm-rule-tabs {
+    background: white;
+    padding: 0 24px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    :global {
+      .ant-tabs-nav {
+        margin: 0;
+      }
+
+      .ant-tabs-tab {
+        padding: 16px 0;
+      }
+    }
+  }
+
+  .table-container {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    :global {
+      .ant-table-thead > tr > th {
+        background-color: #fafafa;
+        font-weight: 500;
+      }
+
+      .ant-table-tbody > tr > td {
+        padding: 12px 8px;
+      }
+
+      .ant-table-pagination {
+        padding: 16px;
+      }
+    }
+  }
+}
+
+.alarm-rule-table {
+  :global {
+    // 为表格添加边框
+    .ant-table {
+      border: 1px solid #f0f0f0;
+      border-radius: 4px;
+    }
+
+    // 表头边框
+    .ant-table-thead > tr > th {
+      border-right: 1px solid #f0f0f0;
+      
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    // 表格内容边框
+    .ant-table-tbody > tr > td {
+      border-right: 1px solid #f0f0f0;
+      
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    // 行边框
+    .ant-table-tbody > tr {
+      border-bottom: 1px solid #f0f0f0;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    // 表格容器边框
+    .ant-table-container {
+      border: 1px solid #f0f0f0;
+      border-radius: 4px;
+    }
+
+    // 表格单元格内边距调整
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 12px 8px;
+    }
+
+    // 固定列边框
+    .ant-table-cell-fix-left,
+    .ant-table-cell-fix-right {
+      border-right: 1px solid #f0f0f0;
+    }
+
+    // 表格滚动区域边框
+    .ant-table-body {
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .threshold-event-rule-detail-panel {
+    padding: 10px;
+  }
+}
